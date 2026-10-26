@@ -24,10 +24,11 @@
       <nav class="main-nav" id="mainNav">
         <a href="#tentang">Tentang</a>
         <a href="#layanan">Fokus Bisnis</a>
+        <a href="#produk">Produk</a>
         <a href="#tim">Tim</a>
         <a href="#kontak">Kontak</a>
       </nav>
-      <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -139,6 +140,56 @@
             <p>Merangkum data harian menjadi laporan yang mudah dibaca pemilik usaha, tanpa perlu membuka spreadsheet
               sendiri.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUK -->
+    <section id="produk" class="section">
+      <div class="wrap produk-grid">
+        <div class="produk-copy">
+          <p class="eyebrow">Produk Kami</p>
+          <h2 class="section-title">GapBot — chatbot yang menjawab pelanggan selagi kamu urus dapur atau toko</h2>
+          <p>GapBot dipasang di WhatsApp Business atau Instagram UMKM, lalu otomatis menjawab pertanyaan yang paling
+            sering berulang setiap hari: jam buka, harga, ongkir, cara pesan, sampai lokasi. Kalau pertanyaannya di
+            luar itu, GapBot langsung meneruskan ke admin tanpa membuat pelanggan menunggu lama.</p>
+          <div class="produk-features">
+            <div class="produk-feature">
+              <h3>Respon instan 24 jam</h3>
+              <p>Pelanggan tidak perlu menunggu pemilik usaha sempat buka HP.</p>
+            </div>
+            <div class="produk-feature">
+              <h3>Paham bahasa sehari-hari</h3>
+              <p>Mengerti "buka jam berapa", "ada ga", atau "berapaan" tanpa format kaku.</p>
+            </div>
+            <div class="produk-feature">
+              <h3>Serah ke admin saat perlu</h3>
+              <p>Pertanyaan di luar topik umum langsung diteruskan, bukan dijawab asal.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-widget">
+          <div class="demo-header">
+            <span class="demo-dot"></span>
+            <div>
+              <strong>GapBot</strong>
+              <span class="demo-sub">Demo — Kopi Rimba, Malang</span>
+            </div>
+          </div>
+          <div class="demo-body" id="demoBody">
+            <div class="demo-msg demo-msg-bot">
+              Halo, selamat datang di Kopi Rimba! Ada yang bisa dibantu? Kamu bisa tanya jam buka, harga, ongkir, cara
+              pesan, atau lokasi kami.
+            </div>
+          </div>
+          <form class="demo-input" id="demoForm">
+            <input type="text" id="demoInput" placeholder="Tulis pertanyaan, misal: jam buka kapan?" autocomplete="off">
+            <button type="submit" aria-label="Kirim">
+              <svg viewBox="0 0 24 24"><path d="M3 11l18-8-8 18-2-8-8-2Z" /></svg>
+            </button>
+          </form>
+          <p class="demo-note">Contoh kata kunci: jam buka, harga, ongkir, cara pesan, lokasi, bayar</p>
         </div>
       </div>
     </section>
