@@ -30,6 +30,45 @@ if (contactForm && formNote) {
   });
 }
 
+// Pricing modal
+const pricingModal = document.getElementById('pricingModal');
+const pricingModalTitle = document.getElementById('pricingModalTitle');
+const selectedPackage = document.getElementById('selectedPackage');
+const pricingModalClose = document.getElementById('pricingModalClose');
+const pricingModalContact = document.getElementById('pricingModalContact');
+const pricingTriggers = document.querySelectorAll('.pricing-trigger');
+
+if (pricingModal && pricingModalTitle && selectedPackage && pricingModalClose) {
+  const closePricingModal = () => {
+    pricingModal.hidden = true;
+    document.body.style.overflow = '';
+  };
+
+  pricingTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const packageName = trigger.dataset.package || 'paket layanan';
+      pricingModalTitle.textContent = packageName;
+      selectedPackage.textContent = packageName;
+      pricingModal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      pricingModalClose.focus();
+    });
+  });
+
+  pricingModalClose.addEventListener('click', closePricingModal);
+  pricingModal.querySelectorAll('[data-modal-close]').forEach(element => {
+    element.addEventListener('click', closePricingModal);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !pricingModal.hidden) closePricingModal();
+  });
+
+  if (pricingModalContact) {
+    pricingModalContact.addEventListener('click', closePricingModal);
+  }
+}
+
 // ===== Demo GapBot =====
 // Chatbot rule-based sederhana: mencocokkan kata kunci dari pertanyaan
 // pelanggan dengan jawaban yang sudah disiapkan untuk UMKM contoh "Kopi Rimba".

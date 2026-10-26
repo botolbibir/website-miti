@@ -202,32 +202,26 @@
         <h2 class="section-title">Pilih paket yang paling sesuai dengan kebutuhan usaha Anda</h2>
         <div class="pricing-grid">
           <article class="pricing-card pricing-card-featured">
-            <p class="pricing-label">Bulan pertama</p>
-            <h3>Perkenalan</h3>
-            <p class="pricing-price">Rp180.000 <span>/ bulan</span></p>
-            <p class="pricing-description">Mulai rapikan operasional usaha dengan GapBot.</p>
-            <a href="#kontak" class="btn btn-primary">Konsultasi sekarang</a>
-          </article>
-          <article class="pricing-card">
-            <p class="pricing-label">Berlangganan</p>
-            <h3>Bulanan</h3>
-            <p class="pricing-price">Rp200.000 <span>/ bulan</span></p>
-            <p class="pricing-description">Fleksibel untuk kebutuhan usaha yang berkembang.</p>
-            <a href="#kontak" class="btn btn-ghost">Pilih paket</a>
+            <p class="pricing-label">Paket bulanan</p>
+            <h3>Mulai &amp; Lanjutkan</h3>
+            <p class="pricing-price">Rp180.000 <span>/ bulan pertama</span></p>
+            <p class="pricing-followup">Rp200.000 <span>/ bulan berikutnya</span></p>
+            <p class="pricing-description">Harga berlangganan setelah bulan pertama.</p>
+            <button type="button" class="btn btn-primary pricing-trigger" data-package="Paket Bulanan">Konsultasi sekarang</button>
           </article>
           <article class="pricing-card">
             <p class="pricing-label">Hemat</p>
             <h3>3 Bulan</h3>
             <p class="pricing-price">Rp450.000 <span>/ 3 bulan</span></p>
             <p class="pricing-description">Lebih hemat untuk penggunaan selama satu kuartal.</p>
-            <a href="#kontak" class="btn btn-ghost">Pilih paket</a>
+            <button type="button" class="btn btn-ghost pricing-trigger" data-package="Paket 3 Bulan">Pilih paket</button>
           </article>
           <article class="pricing-card">
             <p class="pricing-label">Paling hemat</p>
             <h3>Tahunan</h3>
             <p class="pricing-price">Rp1.200.000 <span>/ tahun</span></p>
             <p class="pricing-description">Solusi jangka panjang dengan biaya lebih ringan.</p>
-            <a href="#kontak" class="btn btn-ghost">Pilih paket</a>
+            <button type="button" class="btn btn-ghost pricing-trigger" data-package="Paket Tahunan">Pilih paket</button>
           </article>
         </div>
         <p class="pricing-note">Harga dapat disesuaikan berdasarkan kebutuhan dan cakupan otomatisasi usaha.</p>
@@ -320,6 +314,20 @@
       <p>&copy; 2026 si GapAI. Proyek tugas Manajemen Industri Teknologi Informasi.</p>
     </div>
   </footer>
+
+  <div class="pricing-modal" id="pricingModal" role="dialog" aria-modal="true" aria-labelledby="pricingModalTitle" hidden>
+    <div class="pricing-modal-backdrop" data-modal-close></div>
+    <div class="pricing-modal-content">
+      <button type="button" class="pricing-modal-close" id="pricingModalClose" aria-label="Tutup pop-up">&times;</button>
+      <p class="eyebrow">Paket dipilih</p>
+      <h2 id="pricingModalTitle">Paket Layanan</h2>
+      <p>Anda memilih <strong id="selectedPackage">paket layanan</strong>. Hubungi kami untuk konsultasi dan proses berlangganan.</p>
+      <div class="pricing-modal-actions">
+        <a href="#kontak" class="btn btn-primary" id="pricingModalContact">Lanjut ke kontak</a>
+        <button type="button" class="btn btn-ghost" data-modal-close>Tutup</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
