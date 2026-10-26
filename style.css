@@ -457,6 +457,95 @@ a { color: inherit; }
   font-size: 0.92rem;
 }
 
+/* PRICING */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 36px;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.pricing-card-featured {
+  background: var(--indigo);
+  color: var(--cream);
+  border-color: var(--indigo);
+}
+
+.pricing-label {
+  margin-bottom: 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--teal);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.pricing-card-featured .pricing-label { color: var(--gold); }
+
+.pricing-card h3 {
+  color: var(--indigo);
+  font-size: 1.1rem;
+  margin-bottom: 14px;
+}
+
+.pricing-card-featured h3 { color: var(--cream); }
+
+.pricing-price {
+  margin-bottom: 12px;
+  color: var(--indigo);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.pricing-price span {
+  display: block;
+  margin-top: 4px;
+  color: #5B6274;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.pricing-card-featured .pricing-price,
+.pricing-card-featured .pricing-price span { color: var(--cream); }
+
+.pricing-description {
+  flex: 1;
+  color: #5B6274;
+  font-size: 0.88rem;
+}
+
+.pricing-card-featured .pricing-description { color: rgba(247, 245, 240, 0.78); }
+
+.pricing-card .btn {
+  margin-top: 12px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+}
+
+.pricing-card-featured .btn-primary {
+  background: var(--gold);
+  color: var(--indigo);
+}
+
+.pricing-note {
+  margin: 24px 0 0;
+  color: #5B6274;
+  font-size: 0.85rem;
+}
+
 /* TEAM */
 #tim .eyebrow,
 #tim .section-title {
@@ -601,7 +690,7 @@ a { color: inherit; }
 /* RESPONSIVE */
 @media (max-width: 860px) {
   .hero-grid, .about-grid, .kontak-grid, .produk-grid { grid-template-columns: 1fr; }
-  .service-grid { grid-template-columns: 1fr 1fr; }
+  .service-grid, .pricing-grid { grid-template-columns: 1fr 1fr; }
   .team-grid { grid-template-columns: repeat(3, 1fr); }
   .main-nav {
     display: none;
@@ -620,7 +709,7 @@ a { color: inherit; }
 }
 
 @media (max-width: 560px) {
-  .service-grid { grid-template-columns: 1fr; }
+  .service-grid, .pricing-grid { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-grid { grid-template-columns: 1fr; }
 }
