@@ -555,6 +555,18 @@ a { color: inherit; }
   font-size: 0.85rem;
 }
 
+.pricing-card .btn-ghost {
+  display: inline-block;
+  border: 1.5px solid var(--indigo);
+  background: transparent;
+  color: var(--indigo);
+}
+
+.pricing-card .btn-ghost:hover,
+.pricing-card .btn-ghost:focus-visible {
+  background: rgba(27, 42, 74, 0.08);
+}
+
 .pricing-card-featured .btn-primary {
   background: var(--gold);
   color: var(--indigo);
